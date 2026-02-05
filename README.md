@@ -15,15 +15,16 @@ FULL MODE (-f):
 4. `semgrep ci` - full CI-style security scan
 5. `semgrep --config=p/owasp-top-ten .` - OWASP Top 10 scan
 6. Runs Slither on Solidity files
-7. Saves comprehensive report to pre-audit-report-YYYY-MM-DD.md
+7. Saves comprehensive report to pre-audit-report-YYYY-MM-DD-HHMMSS.md
 
 # Prerequisites:
 * LM Studio running with local server enabled (default: http://localhost:1234/v1)
 * LM Studio Model loaded: `qwen/qwen3-vl-8b`
 * On LM Studio -> Load -> Context Length change value to 16384 at least!
-* semgrep installed          →  `pip install semgrep`
+* semgrep installed          →  `pip install semgrep` && `semgrep login`
 * slither-analyzer installed →  `pip install slither-analyzer`
 * jq installed               →  `brew install jq` / `apt install jq`
+* scc installed              →  `brew install scc` / `go install github.com/boyter/scc/v3@latest`
 
 # Usage:
 ```
